@@ -7,7 +7,7 @@ from transformers import pipeline
 app = Flask(__name__, template_folder="frontend", static_folder="backend")
 
 # Load API key securely
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "Your-API-Key"
 
 
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
