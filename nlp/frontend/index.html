@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Welcome to AI Web App ✨</h1>
+        <p>Select a feature to explore:</p>
+
+        <!-- Navigation Buttons -->
+        <div class="button-container">
+            <button onclick="navigateTo('{{ url_for('summarize') }}')">📝 Summarizer</button>
+            <button onclick="navigateTo('{{ url_for('sentiment') }}')">💭 Sentiment Analysis</button>
+            <button onclick="navigateTo('{{ url_for('recommend') }}')">🎯 Recommendation</button>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Function to navigate to different pages
+         */
+        function navigateTo(page) {
+            window.location.href = page; // Navigate to the selected page
+        }
+    </script>
+</body>
+</html>
